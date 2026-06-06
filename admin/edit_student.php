@@ -41,10 +41,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $target_dir = "student_uploads/";
         $target_file = $target_dir . basename($profile_pic);
         move_uploaded_file($_FILES["profile_pic"]["tmp_name"], $target_file);
-        $sql = "UPDATE Students SET profile_pic='$profile_pic', first_name='$first_name', last_name='$last_name', dob='$dob', gender='$gender', address='$address', phone='$phone', email='$email', password='$password', class_id='$class_id' WHERE student_id=$student_id";
+        $sql = "UPDATE Students SET profile_pic='$profile_pic', first_name='$first_name', last_name='$last_name', dob='$dob', gender='$gender', address='$address', phone='$phone', email='$email', password="YOUR_OWN_API_KEY", class_id='$class_id' WHERE student_id=$student_id";
     } else {
         if (!empty($password)) {
-            $sql = "UPDATE Students SET first_name='$first_name', last_name='$last_name', dob='$dob', gender='$gender', address='$address', phone='$phone', email='$email', password='$password', class_id='$class_id' WHERE student_id=$student_id";
+            $sql = "UPDATE Students SET first_name='$first_name', last_name='$last_name', dob='$dob', gender='$gender', address='$address', phone='$phone', email='$email', password="YOUR_OWN_API_KEY", class_id='$class_id' WHERE student_id=$student_id";
         } else {
             $sql = "UPDATE Students SET first_name='$first_name', last_name='$last_name', dob='$dob', gender='$gender', address='$address', phone='$phone', email='$email', class_id='$class_id' WHERE student_id=$student_id";
         }

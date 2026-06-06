@@ -46,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (!empty($password)) {
-        $sql = "UPDATE Teachers SET password='$password' WHERE teacher_id=$teacher_id";
+        $sql = "UPDATE Teachers SET password="YOUR_OWN_API_KEY" WHERE teacher_id=$teacher_id";
     }
 
     if ($conn->query($sql) === TRUE) {
